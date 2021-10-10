@@ -1,0 +1,77 @@
+.nav-container {
+    background-color: rgb(255, 255, 255);
+    height: 8.5rem;
+    position: center center;
+    font-size: 1.8rem;
+    border-bottom: 1px solid rgb(5, 5, 5) ;   
+}
+
+#navbarNav {
+    display: flex;
+    justify-content:space-evenly    
+}
+
+span {
+     color:black;
+     font-size: 2rem;
+     text-transform: capitalize;
+     font-family: 'Roboto', sans-serif;
+     display: inline-block;
+        
+ }
+
+.logo {
+    color: black;
+}
+
+.nav-img {
+    width: 3.75rem;
+    height: 3.75rem;
+    
+   
+}
+.nav-guru {
+    border-right: .5px solid rgb(0, 0, 0) ; 
+    border-left: .5px solid rgb(0, 0, 0) ;
+    text-align: center;
+    width: 10rem; 
+    
+}
+
+.nav-courses {
+    border-right: .5px solid rgb(0, 0, 0) ; 
+    
+    text-align: center;
+    width: 10rem; 
+    
+}
+
+.nav-Learning {
+    border-right: .5px solid rgb(0, 0, 0) ; 
+    
+    text-align: center;
+    width: 10rem; 
+    
+}
+
+.nav-settings {
+    border-right: .5px solid rgb(0, 0, 0) ; 
+    
+    text-align: center;
+    width: 10rem; 
+    
+}
+ 
+.contact-btn {
+    border-radius: 30px;
+    background-color: black;
+    color: white;
+    font-size: 1.3rem;
+    padding: 5px;
+    width: 10rem;
+    margin-left:8rem;
+}
+.signout-link {
+    margin-left:8.8rem;
+
+}

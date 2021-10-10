@@ -1,0 +1,32 @@
+.guru-Container {
+    background-color: #1ce4e8f5;
+    height:50rem;
+}
+
+.guru-motto {
+    padding-top:10rem;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+.imagecontainer{
+    margin-top: 5rem;
+   
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.joshua {
+    height: 20rem;
+    width:20rem;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 1px 4px 10px 1px;
+}
+.jorge {  
+    height: 20rem;
+    width:20rem;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 1px 4px 10px 1px;
+
+}
