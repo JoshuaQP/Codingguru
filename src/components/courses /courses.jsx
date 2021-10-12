@@ -30,21 +30,21 @@ class Courses extends Component {
                  
                  <div className="row1">
                 <div className="card">
-                    <img src="" alt="" />
-                        <h2> HTML </h2>
-                        <h4>HTML Mastery </h4>
+                <img className="course-img" src="/img/html.png" alt="html"/>
+                        {/* <h2> HTML </h2>
+                        <h4>HTML Mastery </h4> */}
                 </div>
 
                 <div className="card">
                     <img src="" alt="" />
-                        <h2> CSS </h2>
-                        <h4>CSS Mastery </h4>
+                        {/* <h2> CSS </h2>
+                        <h4>CSS Mastery </h4> */}
                 </div>
 
                 <div className="card">
                     <img src="" alt="" />
-                        <h2> Javascript </h2>
-                        <h4>Javascript Basics </h4>
+                        {/* <h2> Javascript </h2>
+                        <h4>Javascript Basics </h4> */}
                 </div>
                 </div>
 

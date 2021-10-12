@@ -1,0 +1,19 @@
+.landing {
+background-color: #B93CF4;
+height:100vh;
+
+
+}
+
+.landingpage-nav{
+    display: flex;
+
+}
+
+.signup-btn {
+    background-color: black;
+    color: white;
+    width: 12rem;
+    height:2rem;
+    border-radius: 20px;
+}

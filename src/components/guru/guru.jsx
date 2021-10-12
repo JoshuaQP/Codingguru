@@ -1,25 +1,28 @@
 import React, { Component } from 'react';
 import "./guru.css";
 
+
 class Guru extends Component {
     state = {  }
     render() { 
         return (
+           
             <div className="guru-Container">
+               
 
                  <div className="guru-motto">
-                <h3> <span>When the student is ready </span>  <br /> <span> The teacher will appear  </span>  </h3>
+                <h3> <span className="heading1">When the student is ready </span>  <br /> <span className="heading2"> The teacher will appear  </span>  </h3>
                 </div>
 
                 <div className="imagecontainer">
 
                     <div className="joshua">
-                        <h4>dcscdcd</h4>
+                    <img className="joshua-img" src="/img/joshua.png" alt="Joshua"/>
                         
                     </div>
 
                     <div className="jorge">
-                        <h4>dcscdcd</h4>
+                    <img className="jorge-img" src="/img/jorge.png" alt="Jorge"/>
 
                     </div>
 

@@ -1,5 +1,6 @@
+
 .guru-Container {
-    background-color: #1ce4e8f5;
+    background-color: #35c2df;
     height:50rem;
 }
 
@@ -15,18 +16,28 @@
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
-.joshua {
-    height: 20rem;
-    width:20rem;
-    background-color: rgb(255, 255, 255);
-    border-radius: 10px;
-    box-shadow: 1px 4px 10px 1px;
-}
-.jorge {  
-    height: 20rem;
-    width:20rem;
-    background-color: rgb(255, 255, 255);
-    border-radius: 10px;
-    box-shadow: 1px 4px 10px 1px;
 
+.joshua-img {
+    height:10rem;
+    width:20rem;
+    border-radius: 40px;
+}
+
+
+.jorge-img {
+    height:10rem;
+    width:20rem;
+    border-radius: 40px;
+
+}
+
+.heading1{
+    color:white;
+    font-size: 3rem;
+    
+}
+
+.heading2 {
+    color:white;
+    font-size: 2rem;
 }
