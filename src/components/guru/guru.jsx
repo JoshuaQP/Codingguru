@@ -22,7 +22,7 @@ class Guru extends Component {
                     </div>
 
                     <div className="jorge">
-                    <img className="jorge-img" src="/img/jorge.png" alt="Jorge"/>
+                    <img className="jorge-img" src="/img/jorge.png" alt="jorge"/>
 
                     </div>
 
