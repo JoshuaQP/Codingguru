@@ -1,12 +1,14 @@
 .landing {
 background-color: #B93CF4;
-height:100vh;
+height:80rem;
 
 
 }
 
 .landingpage-nav{
     display: flex;
+    justify-content: right;
+    margin-top:-7rem;
 
 }
 
@@ -14,6 +16,19 @@ height:100vh;
     background-color: black;
     color: white;
     width: 12rem;
-    height:2rem;
+    height:3rem;
     border-radius: 20px;
+    font-size: 1.5rem;
+}
+.login-link{
+    margin-top:-.5rem;
+    margin-left:4.8rem;
+    color:white;
+}
+  
+.landing-logo{ 
+   margin-left: 2rem;;
+   margin-top:1rem;
+   width:12rem;
+
 }

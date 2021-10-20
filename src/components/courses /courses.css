@@ -1,6 +1,6 @@
 .catalog-page {
     background-color:#FE12BC;
-    height: 50rem;
+    height: 80rem;
 }
 
 .menu-tab {
@@ -16,6 +16,7 @@
 }
 .menu-tab-container {
     margin-top:5rem;
+   
 }
 
 .course-header {
@@ -31,13 +32,7 @@
    
 }
 
-.row2{
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    padding-top: 5rem;
 
-}
 .card {
     height:10rem;
     width:15rem;

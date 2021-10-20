@@ -1,14 +1,14 @@
-import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+import { BrowserRouter, Route, Switch,  } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "font-awesome/css/font-awesome.min.css";
 import NavBar from "./components/navbar/navBar";
 import Courses from "./components/courses /courses";
 import Landing from "./components/landingpage/index";
-import Settings from "./components/settings/settings";
+import Login from "./components/login/login";
 import Guru from "./components/guru/guru";
 import Learning from "./components/learning/learning";
 import Contact from "./components/contact/contact";
-
+import Signup from "./components/signup/signup";
 import "./App.css";
 
 function App() {
@@ -23,8 +23,9 @@ function App() {
           <Route path="/guru" exact component={Guru} />
           <Route path="/courses" exact component={Courses} />
           <Route path="/learning" exact component={Learning} />
-          <Route path="/settings" exact component={Settings} />
+          <Route path="/login" extact component={Login} />
           <Route path="/contact" exact component={Contact} />
+          <Route path="/signup" exact component={Signup} />
           <Route component={Landing} />
         </Switch>
 

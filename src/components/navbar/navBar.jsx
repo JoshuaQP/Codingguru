@@ -29,10 +29,7 @@ function NavBar() {
                 <img className="nav-img" src="/img/brain.png" alt="learning"/>
                 <Link className="nav-link" to= "/learning"><span className="learning-link"> Learning </span></Link>
               </li>
-              <li className="nav-settings settings">
-              <img className="nav-img" src="/img/settings.png" alt="settings"/>
-                <Link className="nav-link" to="/settings"><span className="settings-link"> Settings </span></Link>
-              </li>
+              
               <li className="signout-section">
               <Link className="nav-link" to="/contact"><button className="contact-btn">Contact us</button></Link>
 

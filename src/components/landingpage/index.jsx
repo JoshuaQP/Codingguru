@@ -6,14 +6,14 @@ class Landing extends Component {
     render() {
         return (
             <div className='landing'>
+                <img className=" landing-logo" src="/img/CodingGurus.png" alt="logo"/>
                 <nav className="landingpage-nav">
-                    <div>
-                <img className="nav-logo" src="/img/CodingGurus.png" alt="logo"/>
-                    </div>
+                    
+                    
 
                     <div className="Landing-links"> 
                 <Link className="nav-link" to="/signup"><button className="signup-btn">Sign up</button></Link>                  
-                <Link className="nav-link" to="/login"><span  className="login-link "> Login  </span></Link>
+                <Link className="-link" to="/login"><span  className="login-link "> Login  </span></Link>
                     </div>
 
                 </nav>

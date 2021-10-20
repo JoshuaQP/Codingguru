@@ -13,48 +13,24 @@ class Learning extends Component {
         return ( 
             <div className="learning-container">
 
-                <h1 className="course-material-heading">Course resources</h1>
+                <h1 className="course-material-heading">Course Resources</h1>
                 
                 <div className="learning-container">
                     {/* row 1 begining */}
-                <div className="row1">
-                <div className="card">
-                    <img src="" alt="" />
-                        
-                        <h4>HTML Material </h4>
-                </div>
-
-                <div className="card">
-                    <img src="" alt="" />
-                        
-                        <h4>CSS Material </h4>
-                </div>
+                <div className="row1">              
 
                 <div className="card">
                     <img src="" alt="" />
                         <h4>Javascript Material </h4>
                 </div>
-                </div>
-                {/* row2 begging */}
-                <div className="row2">
-                <div className="card">
-                    <img src="" alt="" />
-                        
-                        <h4>React Material </h4>
-                </div>
-
                 <div className="card">
                     <img src="" alt="" />
                         
                         <h4>Python Material </h4>
                 </div>
 
-                <div className="card">
-                    <img src="" alt="" />
-                        
-                        <h4>MongoDb Material </h4>
                 </div>
-                </div>
+                
                     
                 </div>
                

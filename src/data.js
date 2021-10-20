@@ -4,32 +4,26 @@ const Data = [
         image:"images/javascript.png",
         name: "Javascript Basics",
         category: "Javascript",  
-        description: "Javascript Mastery"
+        description: "Javascript Basics"
     },
+  
     {
         id: 2,
-        image:"images/htmlcss.png",
-        name: "Html",
-        category: "HTML",
-        description: "Html Mastery"
+        image:"images/react.png",
+        name: "React",
+        category: "CSS", 
+        description: "React Basics"
     },
     {
         id: 3,
-        image:"images/react.png",
-        name: "CSS",
-        category: "CSS", 
-        description: "CSS Mastery"
-    },
-    {
-        id: 4,
         image:"images/python.png",
         name: "Python Basics",
         category: "Python",
         description: "Python Basics"
     },
     {
-        id: 5,
-        image:"",
+        id: 4,
+        image:"images/javascript.png",
         name: "Mongodb",
         category: "MongoDB",
         description: "MongoDB basics"
