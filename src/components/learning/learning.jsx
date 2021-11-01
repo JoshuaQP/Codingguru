@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import "./learning.css";
+import NavBar from '../navbar/navBar';
 
 
 
@@ -11,6 +12,8 @@ class Learning extends Component {
     state = {  };
     render() { 
         return ( 
+            <React.Fragment>
+                <NavBar />
             <div className="learning-container">
 
                 <h1 className="course-material-heading">Course Resources</h1>
@@ -36,6 +39,7 @@ class Learning extends Component {
                
            
            </div>
+           </ React.Fragment>
             
 
          );

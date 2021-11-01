@@ -17,6 +17,10 @@ class Landing extends Component {
                     </div>
 
                 </nav>
+                <div>
+                  <h1>Welcome to coding Gurus</h1>
+                  <h2>Where the stundent become the teacher</h2>
+                </div>
                 
 
             </div>

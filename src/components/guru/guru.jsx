@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import "./guru.css";
+import NavBar from "../navbar/navBar";
 
 
 class Guru extends Component {
     state = {  }
     render() { 
         return (
-           
+                  <React.Fragment>
+              <NavBar />
             <div className="guru-Container">
                
 
@@ -31,6 +33,8 @@ class Guru extends Component {
                
 
             </div>
+
+            </React.Fragment>
           );
     }
 }

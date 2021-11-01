@@ -1,0 +1,54 @@
+.lecture-container {
+    background-color: rgb(255, 255, 255);
+    height: 150vh;
+    margin: o;
+    padding:0;
+    display: flex;
+}
+
+.camera-icon {
+    width:1rem;
+    
+    
+}
+
+.table {
+    width: 20%;
+    background-color: rgba(248, 245, 245, 0.986);
+    color: rgb(0, 0, 0);
+    
+
+}
+li:hover {
+    background-color: #ae00ff;
+    color:white;
+}
+
+.lecture-info {
+    margin: o;
+}
+
+.content-header {
+    color: white;
+    
+}
+.videos {
+  width: 78vw;
+  height:75vh;
+  margin-left:1rem;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    margin-left: 1rem;
+}
+.lecture-btn {
+    background-color: #ae00ff;
+    border-radius: 10px;
+    border: 1px solid white;
+    color: whitesmoke;
+    margin-right:2rem;
+    
+}

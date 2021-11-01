@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-
+import "./login.css"
+import { Link } from 'react-router-dom';
 class Login extends Component {
     constructor(props) {
         super(props);
@@ -32,14 +33,15 @@ class Login extends Component {
     render() {
         return (
             
-            <form onSubmit={this.handleSubmit}>
+
+            <form className="login-container" onSubmit={this.handleSubmit}>
                 <div>
-                    <h1>Member Login</h1>
+                    <h1 className="login-header"> Login</h1>
                 </div>
             <div>
                 
-                <label>Username</label>
-                <input 
+                <label>USERNAME:</label> <br />
+                <input className="login-placeholder"
                 type="text" 
                 value={this.state.username}
                 onChange={this.HandleUsernameChange}                 
@@ -49,8 +51,8 @@ class Login extends Component {
             <br />
             <div>
 
-            <label>Password</label>
-                <input 
+            <label>PASSWORD:</label> <br />
+                <input className="login-placeholder"
                 type="text" 
                 value={this.state.password}
                 onChange={this.HandlePasswordChange}                 
@@ -60,7 +62,11 @@ class Login extends Component {
             <br />
 
             
-            <button type="submit">Log In</button>
+            <button className="login-btn" type="submit">Log In</button>
+            <div className="sign-up-link">
+                <h6> Need an Account?</h6>
+                <Link className="login-signup"  to="/signup">Signup now</Link>
+            </div>
 
             </form>
         )

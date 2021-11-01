@@ -1,6 +1,6 @@
 
 .guru-Container {
-    background-color: #35c2df;
+    background-color: #45f9ff;
     height:50rem;
 }
 
@@ -32,12 +32,12 @@
 }
 
 .heading1{
-    color:white;
+    color:black;
     font-size: 3rem;
     
 }
 
 .heading2 {
-    color:white;
+    color:black;
     font-size: 2rem;
 }
