@@ -1,15 +1,15 @@
-import React, { Component } from 'react';
-import {Link,useParams} from "react-router-dom"
+import React  from 'react'
 import "./courses.css";
 import NavBar from '../navbar/navBar';
+import Codeimg from "./codeimg";
+import { useState } from "react";
 
 
 
 
-class Courses extends Component {
-    state = {  
-    };
-    render() { 
+const Courses = () => { 
+    const [items, setItems] = useState(Codeimg);
+
         return ( 
             <React.Fragment>
                 <NavBar/>
@@ -17,7 +17,14 @@ class Courses extends Component {
                  
              <div className="course-header">             
              <h1 className="courses-heading"> Coding with Purpose</h1>
-             </div>       
+             </div>
+             <div>
+                 <button> javascript</button>
+                 <button> jquery</button>
+                 <button> react</button>
+                 <button> mongoDB</button>
+
+            </div>      
              </div>
              </React.Fragment>        
                        
@@ -25,5 +32,5 @@ class Courses extends Component {
     }
     
 
-}
+
 export default Courses;

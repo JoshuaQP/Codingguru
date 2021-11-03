@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import "./login.css"
 import { Link } from 'react-router-dom';
+import { signInWithGoogle } from '../../firebase/firebase.utils'
+
+
 class Login extends Component {
     constructor(props) {
         super(props);
@@ -63,6 +66,11 @@ class Login extends Component {
 
             
             <button className="login-btn" type="submit">Log In</button>
+            <button className="login-btn" onClick={signInWithGoogle}>
+                {''}
+                Sign in with google
+                {''}
+                </button>
             <div className="sign-up-link">
                 <h6> Need an Account?</h6>
                 <Link className="login-signup"  to="/signup">Signup now</Link>
