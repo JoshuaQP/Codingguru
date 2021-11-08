@@ -1,78 +1,65 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 import "./contact.css";
+import { firestore } from '../../firebase/firebase.utils';
 
-class Contact extends Component {
-    constructor(props) {
-        super(props);
+const Contact = () => {
+    const [name,setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [message,setMessage] = useState("");
+    const [loader, setLoader] = useState(false);
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setLoader(true)
+        firestore.collection('contacts').add({
+         name:name,
+         email:email,
+         message:message, 
 
+        })
+        .then(() => {
+            alert('Message has been submitted');
+            setLoader(false);
+        })
+        .catch((error) => {
+            alert(error.message);
+            setLoader(false);
+        });
 
-        this.state = {
-            username:"",
-            email:"",
-            comments:"",
-        };
-    }
-    HandleUsernameChange = (event) => {
-        this.setState ({
-            username: event.target.value,
-            
-        });
+        setName('');
+        setEmail('');
+        setMessage('');
     };
-    HandleEmailChange = (event) => {
-        this.setState ({
-            email: event.target.value,
-            
-        });
-    };
-    HandleCommentsChange = (event) => {
-        this.setState ({
-            comments: event.target.value,
-            
-        });
-    };
-    handleSubmit = (event) => {
-        alert(`${this.state.username} ${this.state.email} ${this.state.comments}`);
-        event.preventDefault();
-    }
-    
-    render() {
         return (
-            <form onSubmit={this.handleSubmit}>
-                <h1>Contact Us</h1>
-            <div>
-                <label>Name</label>
-                <input 
-                type="text" 
-                value={this.state.username}
-                onChange={this.HandleUsernameChange}                 
-                />      
-            </div>
+            <form className="contact-form" onSubmit={handleSubmit}>
+                <h1> Contact Form</h1>
+               
+               <label>Name</label>
+               <input placeholder="Name"
+               value={name}
+               onChange = {(e) => setName(e.target.value)}
+               />
 
-            <br />
-            <div>
+               <label>Email</label>
+               <input placeholder="Email" value={email}
+               value={email}
+               onChange = {(e) => setEmail(e.target.value)}  />
 
-            <label>Email</label>
-                <input 
-                type="text" 
-                value={this.state.email}
-                onChange={this.HandleEmailChange}                 
-                />
-            </div>
+               <label>Message</label>
+               <textarea placeholder="Message"
+               value={message}
+               onChange = {(e) => setMessage(e.target.value)}>
+               </textarea>
 
-            <br />
+               <button type="submit" style ={{ background : loader ?
+               ":#ccc" : " rgb(2,2,110)"
 
-            <div>
-                <label>Comments</label>
-                <textarea
-                value={this.state.comments}
-                onChange={this.HandleCommentsChange} 
-                />
-            </div>
-            <button type="submit">Submit</button>
+               }}>Submit</button>
 
+               
+                
             </form>
         )
     }
-}
+
 
 export default Contact

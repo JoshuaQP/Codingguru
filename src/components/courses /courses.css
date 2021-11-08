@@ -8,6 +8,20 @@
     justify-content:space-around;
 }
 
+.courses-selction {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.course-card {
+    background-color: rgb(0, 0, 0);
+    width: 20rem;
+    margin-bottom: 3rem;
+    border-radius: 10px;
+    color: white;
+}
+
 .course-btn{
     background-color: rgba(0, 0, 0, 0.822);
     color:white;
@@ -41,6 +55,7 @@
 }
 .courses-heading {
     color: white;
+    margin-bottom: 2rem;
 }
 .course-img{
     width:10rem;

@@ -1,0 +1,26 @@
+form {
+    background: white;
+    text-align: center;
+    
+    height:60vh;
+    position: center, center;
+    width: 35vw;
+    margin-top: 10rem;
+    margin-left:40rem;
+    border-radius:10px;
+    border:1px solid black;
+}
+
+.contact-placeholder {
+    background-color: #E7F1FE;
+    border-radius: 10px;
+    width: 20rem;
+}
+
+.text-placeholder {
+    background-color: #E7F1FE;
+    border-radius: 10px;
+    width:40rem;
+    height:10rem;
+
+}

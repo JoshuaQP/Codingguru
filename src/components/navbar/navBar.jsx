@@ -1,13 +1,10 @@
 import React from 'react';
 import "./navBar.css";
-import {Link,useParams} from "react-router-dom"
+import {Link} from "react-router-dom"
+import { auth } from '../../firebase/firebase.utils';
 
-function NavBar() {
-
-     const {page} = useParams()
-
-      return( 
-          <div className={`nav-container ${page}`} >
+const NavBar = ({ currentUser }) => (
+          <div className="nav-container" >
         <nav className="navbar navbar-expand-lg navbar-light bg-gray" >
         <div className="container-fluid">
           
@@ -32,11 +29,16 @@ function NavBar() {
               
               <li className="signout-section">
               <Link className="nav-link" to="/contact"><button className="contact-btn">Contact us</button></Link>
-
-                <Link className="nav-link" to=""><span  className="signout-link "> Sign out  </span></Link>
+              {
+              currentUser ?
+              <div className='option' to='/guru'   onClick={()=> auth.signin()}> Signin </div>
+              :
+              <Link className='signout-link' to='/'> Sign out  </Link>
+            }
+                
               </li>
-             
             </ul>
+           
            
 
           </div>
@@ -47,7 +49,7 @@ function NavBar() {
       
     );
 
-    }
+    
 
     
 

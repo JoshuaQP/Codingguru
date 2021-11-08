@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import "./login.css"
 import { Link } from 'react-router-dom';
-import { signInWithGoogle } from '../../firebase/firebase.utils'
+import { auth, signInWithGoogle } from '../../firebase/firebase.utils'
 
 
 class Login extends Component {
@@ -10,14 +10,14 @@ class Login extends Component {
 
 
         this.state = {
-            username:"",
+            email:"",
             password:"",
             
         };
     }
-    HandleUsernameChange = (event) => {
+    HandleEmailChange = (event) => {
         this.setState ({
-            username: event.target.value,
+            email: event.target.value,
             
         });
     };
@@ -28,10 +28,19 @@ class Login extends Component {
         });
     };
     
-    handleSubmit = (event) => {
-        alert(`${this.state.username} ${this.state.password}`);
+    handleSubmit =  async event => { 
         event.preventDefault();
-    }
+        const { email, password } = this.state;
+
+        try {
+            await auth.signInWithEmailAndPassword(email,password);
+
+            this.setState({ email:'', password: '',});
+        } catch (error){
+          console.log(error)
+        }
+
+    };
     
     render() {
         return (
@@ -43,11 +52,11 @@ class Login extends Component {
                 </div>
             <div>
                 
-                <label>USERNAME:</label> <br />
+                <label>EMAIL:</label> <br />
                 <input className="login-placeholder"
                 type="text" 
-                value={this.state.username}
-                onChange={this.HandleUsernameChange}                 
+                value={this.state.email}
+                onChange={this.HandleEmailChange}                 
                 />      
             </div>
 
@@ -56,7 +65,7 @@ class Login extends Component {
 
             <label>PASSWORD:</label> <br />
                 <input className="login-placeholder"
-                type="text" 
+                type="password" 
                 value={this.state.password}
                 onChange={this.HandlePasswordChange}                 
                 />
@@ -65,10 +74,10 @@ class Login extends Component {
             <br />
 
             
-            <button className="login-btn" type="submit">Log In</button>
+            <button className="login-btn" type="submit" onChange={this.handleSubmit}>Log In</button> <br />
             <button className="login-btn" onClick={signInWithGoogle}>
                 {''}
-                Sign in with google
+                Sign in with Google
                 {''}
                 </button>
             <div className="sign-up-link">

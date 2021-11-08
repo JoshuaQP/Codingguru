@@ -1,20 +1,22 @@
-import React, { Component } from 'react'
-import {Link} from 'react-router-dom'
+import React from 'react';
+import { auth, createUserProfileDocument} from '../../firebase/firebase.utils'
+import {Link} from "react-router-dom"
 
-class Signup extends Component {
+class Signup extends React.Component {
     constructor(props) {
         super(props);
 
 
         this.state = {
-            username:"",
+            email:"",
             password:"",
+            confirmPassword: ""
             
-        };
+        }
     }
-    HandleUsernameChange = (event) => {
+    HandleEmailChange = (event) => {
         this.setState ({
-            username: event.target.value,
+            email: event.target.value,
             
         });
     };
@@ -24,13 +26,41 @@ class Signup extends Component {
             
         });
     };
+    HandleconfirmPasswordChange = (event) => {
+        this.setState ({
+            confirmPassword: event.target.value,
+            
+        });
+    };
     
-    handleSubmit = (event) => {
-        alert(`${this.state.username} ${this.state.password}`);
+    handleSubmit = async event => {
         event.preventDefault();
-    }
+
+        const { email, password, confirmPassword } = this.state;
+
+        if(password != confirmPassword) {
+            alert("password don't match");
+            return;
+        } 
+
+        try {
+            const {user} = await auth.createUserWithEmailAndPassword( email, password);
+
+         await createUserProfileDocument(user)
+         this.setState({
+            email:"",
+            password:"",
+            confirmPassword: ""
+         })
+        } catch(error) {
+            console.log(error);
+
+        }
+    };
+    
     
     render() {
+        const { email, password, confirmPassword } = this.state;
         return (
             
             <form className="login-container" onSubmit={this.handleSubmit}>
@@ -39,11 +69,11 @@ class Signup extends Component {
                 </div>
             <div>
                 
-                <label>Username:</label> <br/>
+                <label>Email:</label> <br/>
                 <input className="login-placeholder"
                 type="text" 
-                value={this.state.username}
-                onChange={this.HandleUsernameChange}                 
+                value={this.state.email}
+                onChange={this.HandleEmailChange}                 
                 />      
             </div>
 
@@ -62,15 +92,17 @@ class Signup extends Component {
             <label>Confirm Password:</label> <br/>
                 <input  className="login-placeholder"
                 type="password" 
-                value={this.state.password}
-                onChange={this.HandlePasswordChange}                 
+                value={this.state.confirmPassword}
+                onChange={this.HandleconfirmPasswordChange}                 
                 />
             </div>
 
             <br />
 
             
-            <button className="login-btn" type="submit">Sign up</button>
+            <button className="login-btn" type="submit"
+            onChange={this.handleSubmit}
+            >Sign up</button>
             <div className="sign-up-link">
                 <h6>Already have an account?</h6>
                 <Link className="login-signup"  to="/login">Login</Link>
