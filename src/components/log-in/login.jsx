@@ -50,8 +50,8 @@ class Login extends Component {
                 required  /> <br/>
                 
 
-                <input className="login-btn" type="submit" value="submit Form" /> <br/>
-                <button className="login-btn" onclick={signInWithGoogle}>
+                <input className="login-btn" type="submit" value="Login" /> <br/>
+                <button className="login-btn" onClick={signInWithGoogle}>
                     {''}
                     Sign in with google {''}</button>
             </form>

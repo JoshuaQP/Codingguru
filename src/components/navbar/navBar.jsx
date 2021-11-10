@@ -33,7 +33,7 @@ const NavBar = ({ currentUser }) => (
               currentUser ?
               <div className='option' to='/guru'   onClick={()=> auth.signin()}> Signin </div>
               :
-              <Link className='signout-link' to='/'> Sign out  </Link>
+              <Link className='signout-link' to='/'> Sign out </Link>
             }
                 
               </li>
