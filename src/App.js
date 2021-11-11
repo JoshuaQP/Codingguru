@@ -9,7 +9,7 @@ import SignInSignUp from "./components/login-signup/login-signup";
 import Guru from "./components/guru/guru";
 import Learning from "./components/learning/learning";
 import Contact from "./components/contact/contact";
-import {auth} from './firebase/firebase.utils';
+import {auth, createUserProfileDocument} from './firebase/firebase.utils';
 
 import "./App.scss";
 
@@ -23,9 +23,20 @@ class App extends Component {
     }
     unsubscribefromAuth = null
     componentDidMount() {
-    this.unsubscribefromAuth = auth.onAuthStateChanged(user => {
-        this.setState({ currentUser: user });
-        console.log(user);
+    this.unsubscribefromAuth = auth.onAuthStateChanged(async userAuth => {
+        if (userAuth){
+          const userRef = await createUserProfileDocument(userAuth)
+          userRef.onSnapshot(snapShot =>{
+            this.setState({
+              currentUser: {
+                id: snapShot.id,
+                ...snapShot.data()
+              }
+            });
+          });
+        }
+        this.setState({ currentUser: userAuth });
+       
       });
     }
 
