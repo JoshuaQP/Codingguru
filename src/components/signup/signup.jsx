@@ -44,9 +44,10 @@ class SignUp extends Component {
         const {displayName, email, password, confirmPassword } = this.state;
     return (
         <div>
+            <form onSubmit = {this.handleSubmit}>
             <h2>I do not have an account</h2>
             <span>signup with email and password</span>
-            <form onSubmit = {this.handleSubmit}>
+
                 <input
                 type='text'
                 name='displayName'
