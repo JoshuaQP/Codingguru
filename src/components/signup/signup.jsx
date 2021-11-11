@@ -44,10 +44,11 @@ class SignUp extends Component {
         const {displayName, email, password, confirmPassword } = this.state;
     return (
         <div>
-            <form onSubmit = {this.handleSubmit}>
+            <form >
             <h2>I do not have an account</h2>
-            <span>signup with email and password</span>
+            <span>signup with email and password</span><br /><br />
 
+            <label> DisplayName</label> <br />
                 <input
                 type='text'
                 name='displayName'
@@ -56,6 +57,8 @@ class SignUp extends Component {
                 label= 'displayName'
                 required
                 />
+                <br />
+                <label> Email</label><br /> 
                 <input
                 type='emil'
                 name='email'
@@ -64,6 +67,8 @@ class SignUp extends Component {
                 label= 'Email'
                 required
                 />
+                <br />
+                <label> Password</label> <br />
                 <input
                 type='password'
                 name='password'
@@ -72,6 +77,9 @@ class SignUp extends Component {
                 label= 'Password'
                 required
                 />
+                <br />
+                <label> Confirm Password</label>
+                <br />
                 <input
                 type='password'
                 name='confirmPassword'
@@ -80,7 +88,8 @@ class SignUp extends Component {
                 label= 'confirmPassword'
                 required
                 />
-                <button type='submit'>Sign up</button>
+                <br />
+                <button onSubmit = {this.handleSubmit} type='submit'>Sign up</button>
 
             </form>
             
